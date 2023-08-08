@@ -22,6 +22,7 @@ tar -czf \
     
 
 # Tar etcd
+# TODO: Different treatment for M and A files?
 ostree admin config-diff | awk '{print "/etc/" $2}' | xargs tar -czf /usr/bkup/etcd.tar.gz
 
 # Commit
